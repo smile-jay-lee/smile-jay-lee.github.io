@@ -1,0 +1,58 @@
+site_name: 李杰的数字花园
+site_url: https://smile-jay-lee.github.io/
+site_author: 李杰 (Smile Jay)
+site_description: 创业公司CTO / 信大准研究生 / 全栈开发者
+
+repo_name: smile-jay-lee/github.io
+repo_url: https://github.com/smile-jay-lee/smile-jay-lee.github.io
+
+theme:
+  name: material
+  language: zh # 中文支持
+  palette: 
+    # 浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至深色模式
+    # 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换至浅色模式
+  features:
+    - navigation.tabs # 顶部导航栏模式
+    - navigation.top  # 返回顶部按钮
+    - navigation.tracking # 此时位置追踪
+    - content.code.copy # 代码块复制按钮
+    - search.highlight # 搜索高亮
+
+# 插件配置
+plugins:
+  - search
+  - git-revision-date-localized: # 显示文章最后更新时间
+      enable_creation_date: true
+
+# 自定义脚本 (用来实现你的“动态模式”悬浮提示)
+extra_javascript:
+  - javascripts/dynamic-mode.js
+
+# 目录结构 (对应你的设计)
+nav:
+  - 首页: index.md
+  - 造物 | Projects: 
+    - 获客系统架构: projects/innplc.md
+    - 运维实战: projects/devops.md
+  - 行路 | Journey:
+    - 兼职CTO之路: experience/cto.md
+    - 信大保研记: experience/research.md
+  - 沉思 | Musings:
+    - 时事随笔: musings/politics.md
+    - 历史镜像: musings/history.md
+  - 动态模式 (React): '#' # 这里是个占位符，点击会触发 JS
