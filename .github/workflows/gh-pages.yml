@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master # 或者是 main，根据你的实际分支
-      - myself # 同时也监听你的开发分支
+      - gh-pages # 同时也监听你的开发分支
 permissions:
   contents: write
 jobs:
