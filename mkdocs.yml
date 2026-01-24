@@ -52,4 +52,5 @@ nav:
     - 本科经验分享: experience/study.md
   - 思考与随笔:
     - 家庭分工: considerations/family.md
+    - 一次访谈: considerations/interview.md
   - 动态模式 (React): '#' # 这里是个占位符，点击会触发 JS
