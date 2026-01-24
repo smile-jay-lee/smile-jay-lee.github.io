@@ -1,29 +1,36 @@
 name: Deploy MkDocs
+
 on:
   push:
     branches:
-      - master # 或者是 main，根据你的实际分支
-      - gh-pages # 同时也监听你的开发分支
+      - main # 源码分支，构建后推送到 gh-pages
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Configure Git Credentials
+      - name: first checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Git user
         run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v5
+          git config user.name "smile-jay-lee"
+          git config user.email "748974300@qq.com"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-      - uses: actions/cache@v4
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin
-      - run: mkdocs gh-deploy --force
+          python-version: '3.x'
+
+      - name: Install MkDocs deps
+        run: |
+          pip install mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin
+
+      - name: Build & Deploy to gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdocs gh-deploy --force --clean -b gh-pages
