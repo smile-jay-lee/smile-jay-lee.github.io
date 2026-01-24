@@ -48,11 +48,8 @@ nav:
   - 首页: index.md
   - 项目经历: 
     - 获客系统架构: projects/innplc.md
-    - 运维实战: projects/devops.md
-  - 工作经历:
-    - 兼职CTO之路: experience/cto.md
-    - 信大保研记: experience/research.md
+  - 工作经历和经验分享:
+    - 本科经验分享: experience/study.md
   - 思考与随笔:
-    - 时事随笔: musings/politics.md
-    - 历史镜像: musings/history.md
+    - 家庭分工: considerations/family.md
   - 动态模式 (React): '#' # 这里是个占位符，点击会触发 JS
