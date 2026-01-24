@@ -1,8 +1,0 @@
-Backup of AGENT.MD before editing.
-
-Original content:
-```markdown
-git 提交的时候遵循下面的规则
-1.用git add . -> git commit -> git push 的命令行形式
-2.git commit内容要结合具体功能，读取文件后推送
-```
