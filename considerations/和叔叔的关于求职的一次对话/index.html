@@ -1,0 +1,1390 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="创业公司CTO / 信大准研究生 / 全栈开发者">
+      
+      
+        <meta name="author" content="Jay">
+      
+      
+        <link rel="canonical" href="https://smile-jay-lee.github.io/considerations/%E5%92%8C%E5%8F%94%E5%8F%94%E7%9A%84%E5%85%B3%E4%BA%8E%E6%B1%82%E8%81%8C%E7%9A%84%E4%B8%80%E6%AC%A1%E5%AF%B9%E8%AF%9D/">
+      
+      
+        <link rel="prev" href="../lj%E6%80%9D%E6%83%B3%E9%98%B6%E6%AE%B5%E4%B8%80/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>一次对话 - Jay's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Jay&#39;s Blog" class="md-header__button md-logo" aria-label="Jay's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jay's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              一次对话
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/smile-jay-lee/smile-jay-lee.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    smile-jay-lee/github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projects/innplc/" class="md-tabs__link">
+          
+  
+  
+  项目经历
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../experience/study/" class="md-tabs__link">
+          
+  
+  
+  工作经历和经验分享
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../family/" class="md-tabs__link">
+          
+  
+  
+  思考与随笔
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="#" class="md-tabs__link">
+        
+  
+  
+    
+  
+  动态模式 (React)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Jay&#39;s Blog" class="md-nav__button md-logo" aria-label="Jay's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jay's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/smile-jay-lee/smile-jay-lee.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    smile-jay-lee/github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目经历
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    项目经历
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/innplc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    获客系统架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作经历和经验分享
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工作经历和经验分享
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experience/study/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本科经验分享
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    思考与随笔
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    思考与随笔
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../family/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    家庭分工
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    一次访谈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%80%8A%E5%A4%A7%E6%98%8E%E7%8E%8B%E6%9C%9D1566%E3%80%8B1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《大明王朝1566》1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92%E6%80%9D%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    职业规划思考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%81%8C%E5%9C%BA%E6%95%99%E8%AE%AD1%EF%BC%9A%E6%B5%81%E7%A8%8B%E5%8C%96%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    职场教训1——流程化的重要性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lj%E6%80%9D%E6%83%B3%E9%98%B6%E6%AE%B5%E4%B8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lj思想阶段一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    一次对话
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    一次对话
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        珍贵对话归档：与叔叔的深度交流（关于实习、AI与工程师思维）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="珍贵对话归档：与叔叔的深度交流（关于实习、AI与工程师思维）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-0939" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1月21日 09:39
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#121-0953" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1月21日 09:53
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-1212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1月22日 12:12（及后续回复）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1203" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:03
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1215" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:15（关键拷问）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1224" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:24
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1232" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1247" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:47
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13:13
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动态模式 (React)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        珍贵对话归档：与叔叔的深度交流（关于实习、AI与工程师思维）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="珍贵对话归档：与叔叔的深度交流（关于实习、AI与工程师思维）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-0939" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1月21日 09:39
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#121-0953" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1月21日 09:53
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-1212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1月22日 12:12（及后续回复）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1203" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:03
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1215" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:15（关键拷问）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1224" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:24
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1232" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1247" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12:47
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13:13
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>一次对话</h1>
+
+<p>这份对话记录涵盖了从<strong>职业规划、技术趋势（AI编程）、简历优化、项目挖掘</strong>到<strong>工程师思维</strong>的完整闭环。</p>
+<hr />
+<h3 id="ai">珍贵对话归档：与叔叔的深度交流（关于实习、AI与工程师思维）</h3>
+<p><strong>时间跨度：</strong> 1月21日 - 2月初
+<strong>参与人：</strong> 叔叔、我（杰）</p>
+<hr />
+<h4 id="121-0939"><strong>1月21日 09:39</strong></h4>
+<p><strong>叔叔：</strong></p>
+<p><strong>研发效能工程师-实习生JD职位描述</strong>
+a. 在指导下完成负责研发效率、CI/CD 相关基础设施的优化及维护，持续优化完善自动化过程;</p>
+<p>b. 参与开发客户端构建工具链，持续优化编译调试效率;</p>
+<p><strong>职位要求</strong></p>
+<p>a. 本科及以上学历，计算机、软件工程相关专业，学科基础扎实。</p>
+<p>b. 熟悉C++/Python/Nodejs语言，熟悉CMake, 熟练使用Git, 熟悉Linux指令及Shell编程</p>
+<p>c. 具有全栈开发经验/Android或iOS移动端开发经验优先</p>
+<p>d. 搭建自动化集成流程框架或者自动化测试经验优先。</p>
+<p>e. 对技术有热情，学习能力强，责任心强，工作认真细致，具备良好的服务意识，具有良好的团队沟通与协作能力。</p>
+<p><strong>我：</strong>
+叔叔，看了下JD，感觉这个岗位比纯算法岗更适合我。我现在做的毕设项目(获客系统)还有几个小网站就是我自己负责全栈开发的。最近为了上线，正好在天天折腾Linux服务器，像Nginx 配置、HTTPS证书、写脚本跑服务这些流程我都有尝试过，但是做的过程中可能比较依赖ai, Shell这块算是有实战经验。这种偏落地和效能的活儿，我上手应该很快。但是，目前项目我主要是用ai写 test.py这样的自动化脚本，所以CI/CD那种大型自动化流程还没太接触，这块知识可能需要学习一下。</p>
+<p>我想投递一下试试看。</p>
+<p><strong>叔叔：</strong>
+你有移动端开发经验么？Android/ios</p>
+<h4 id="121-0953"><strong>1月21日 09:53</strong></h4>
+<p><strong>我：</strong>
+安卓原生开发可能只有学校课程设计水平，用Android Studio写个简单的Demo，懂一点 Gradle构建和 Java基础，但复杂的商业项目确实没搞过。小程序这块我有接触过(用的 Vue/UniApp 技术栈)，之前实习过程中接触过，我觉得可能对移动端的适配、调试、网络请求这些逻辑是通的。</p>
+<p><strong>叔叔：</strong>
+你可以先补一补，客户端和 git 操作。</p>
+<p><strong>我：</strong>
+git很熟悉，我经常用。</p>
+<p><strong>叔叔：</strong>
+2月初再投递。</p>
+<p><strong>我：</strong>
+好的好的。</p>
+<p><strong>叔叔：</strong>
+算法题也会有，所以还是要准备下。</p>
+<p><strong>我：</strong>
+嗯嗯嗯，算法难度大概是什么样的呀？简单 -中等？</p>
+<p><strong>叔叔：</strong>
+简单 -中等。</p>
+<p><strong>我：</strong>
+噢噢好的好的。</p>
+<hr />
+<h4 id="122-1212"><strong>1月22日 12:12（及后续回复）</strong></h4>
+<p><strong>我：</strong>
+叔叔，昨天看到个新闻，GPT5.2用7天写出了三百万行代码，复刻了谷歌浏览器，但是我看有人说把项目拉下来之后，发现其实全是架构混乱的壳子，真实的业务逻辑可能被ai用简单的几行代码糊弄过去，维护成本甚至高过ai编辑快速完成节省的时间。然后我上个月写了一个系统，在写的过程中，也是主要是依赖 copilot+Claude4.5完成的，然后复杂的逻辑我用 Claude code+GLM4.7执行文档审核，两个agent合作互相审核和完善，但是最后方案还是需要我来大致看一遍。</p>
+<p>然后我就比较好奇，字节的内部对AI编程的看法是怎么样的，是真的觉得ai以后能重构开发范式，还是说更多是辅助工具，用的时候时刻担心会造成大量的幻觉，后期维护成本过高?</p>
+<p><strong>叔叔：</strong>
+之前比较忙，没有回你消息。</p>
+<p>简单说下，AI是降门槛和提效的有效的手段。按照目前的AI能力来看，单纯的编码能力已经是顶尖。未来的发展趋势就是AI可以独立完成需求设计、开发、测试、交付验证。现在还只是在初期的阶段。</p>
+<p>字节目前对AI编程是积极拥抱的态度，大部分互联网公司是一样的态度，AI使用率越高，团队的效率越高。公司内也有大量的AI工具在建设。</p>
+<p>AI的幻觉很大一部分来自于“本身需求的不清晰”，如果你没有给到清晰的上下文，无论是人还是AI,都不见得能给到你想要的答案。类似考试也要划重点，是一样的。在业界的实践中大部分都是在引导大家进行“补充更有效的上下文”，而这件事就是当下必须需要人介入的，这也进一步使得人和人的差异凸显出来，基础扎实，逻辑性强，思维缜密，表达能力好的同学就会更突出更高效。</p>
+<p>你的简历准备得怎么样了?春节后可以尝试投一下。
+另外算法题还是要刷的，这是判断同学技术基础和思维逻辑的重要参考。</p>
+<p><strong>我：</strong>
+最近在做现在实习公司这边的一个Java项目和刷算法题，我搜了一下字节面试好像是对底层原理要求比较高，所以我想借助这个项目了解一些常用的开发相关的内容(Redis, git命令，进程锁，还有并发之类的，不知道有没有用）。</p>
+<p>我最近也在和ai聊，然后ai说大厂想要招的不是只会curd的开发，是想招有架构师思维的开发人员。</p>
+<p><strong>叔叔：</strong>
+是多方面考察的，比如你做的java项目，有什么难点?你怎么解决的?一般会顺着项目了解细节，评估需求的难度/复杂度。以及你的应对方式，是被动的接受需求还是有自己的想法。看你做事的方式。</p>
+<blockquote>
+<p>对技术有热情，学习能力强，责任心强，工作认真细致，具备良好的服务意识，具有良好的团队沟通与协作能力。</p>
+</blockquote>
+<p>从你做的事情中评估你的技术热情、学习能力、责任心等等。</p>
+<h4 id="1203"><strong>12:03</strong></h4>
+<p><strong>我：</strong>
+情景是这样的，五个月前我招进来这个公司(遨森电商)的岗位工作其实是低代码平台影刀开发，但是组长分配的RPA需求我通常半天搞定(排期可能是一两天)，剩余时间主动申请调研这个Java项目，起初带我的师兄只是让我写个预研究报告，但是我空的时间实在太多了，他们分配的任务一点难度都没有，然后我就开始写代码了。</p>
+<p>然后组长给我分配了接手另一个实习生开发的公司自研平台对接Wayfair平台商品推送的Java项目，两个星期前接手的时候，GraphQL封装层耦合严重，"改国家"要动几十个文件，还有编码bug。然后我就在做影刀工作的空余时间，就把它给重构了一遍。最近是在调研公司他这边其他平台对接的实现方式，用AI给他总结。然后再结合Wayfair平台的开发文档用AI先生成了一版初稿，然后我再慢慢的改。</p>
+<p>其他:之前还做过FastAPI获客平台、个人网站练手(GitHub Actions+CICD)。</p>
+<p><strong>我（补充）：</strong>
+对了，这个Python项目，主导获客系统开发 (FastAPl)。针对第三方接口不稳定性实现指数重试机制;针对AI生成的冗余代码进行模块化重构，降低维护成本，提升可读性。这个是和温州一个公司一起做的一个外包项目，相当于是线上的远程实习生。</p>
+<p>我就担心，项目难度这一块会不会面试官有点看不上。或者我假期在家可以补充一下哪部分内容嘛。</p>
+<h4 id="1215"><strong>12:15（关键拷问）</strong></h4>
+<p><strong>叔叔：</strong>
+你觉得这些项目有什么难点?</p>
+<blockquote>
+<p>--组长分配的RPA需求我通常半天搞定(排期可能是一两天)</p>
+</blockquote>
+<ol>
+<li>是因为需求简单你能半天能搞定，还是因为你比别人能力更强，做得更快?别人能不能半天搞定?</li>
+<li>需求的质量怎样?交付后是否有完整的测试流程?还是自己测测没有问题就交付了?</li>
+</ol>
+<blockquote>
+<p>-- GraphQL封装层耦合严重，"改国家"要动几十个文件，还有编码bug。然后我就在做影刀工作的空余时间，就把它给重构了一遍。</p>
+</blockquote>
+<p>“重构”的技术方案是什么样的?做了哪些事情?效果怎么样?</p>
+<p>一般面试就是这样，顺着你讲的项目，点深入问一些细节来了解项目难度和思维方式。
+除了这些之外还有就是技术基础和代码考核。</p>
+<p><strong>我：</strong></p>
+<ol>
+<li>Python这个，主要是对接的平台(tikhub)经常改api，因为抖音的反爬机制是很厉害的，所以基本上定不定期就要进行接口的重写，有时候新的能用，有时候老的能用，需要经常关注公告，我就写了一个回退机制，就是同时写了V3到V6的接口对接程序，然后需要用到哪个，我就给他开启哪个。</li>
+</ol>
+<p>还有就是AI生成的代码虽然一下子生成很快，往往存在很多bug，我就通过ai写单元测试的方式来修复。比如说我把技术文档已经丢给他了，但是他生成的还会遗落一些参数。所以我写测试文件校验输入输出。
+同时同事为了追求项目进度，就经常把很多函数写在一个文件里导致维护的时候翻起来很麻烦，我就给他重构了一下。模块化了。</p>
+<ol>
+<li>Java这个目前是在重构的过程中发现在他写的一些代码在别的地方调用不了，然后我回去检查，才发现实习生同事把所有的通用实体类写成了私有类。但是因为其实目前只写了传输层的类的定义，所以技术难点上其实都没有碰到很难的。</li>
+</ol>
+<p><strong>叔叔：</strong></p>
+<p>你自己也不觉得这里有难点，所以项目经验这块没有优势。那技术基础和代码考核的影响就会增大。</p>
+<blockquote>
+<p>--还有就是AI生成的代码虽然一下子生成很快，往往存在很多bug，我就通过ai写单元测试的方式来修复。</p>
+</blockquote>
+<p>AI生成代码会存在bug，那AI单测也会有同样的问题，这里是怎么解决的？</p>
+<h4 id="1224"><strong>12:24</strong></h4>
+<p><strong>我：</strong>
+开始没有这么快的，就是三个月之后，我大概就比较熟悉影刀了，就经常是提需求的速度赶不上我写的速度，而且他这个需求是周期性的，就是有时候业务比较忙的时候，需求会比较多，闲的时候我觉得没事情干，我就主动找了。</p>
+<p>需求主要分为两类：
+一类是维护旧的平台，比如说亚马逊商品上架，这个就是要先去理解它的复杂逻辑，然后修复一些小的逻辑错误，或者是修复一些元素失效的问题，这个是比较前期的开发任务，后面的话，因为这个流程我比较熟悉了，改一下就比较快。但是测试还是挺耗时间的。
+另一类是把原来他们需要人工做的复杂的流程，想通过自动化的方式，比如说去亚马逊上下载商品信息，然后再传到飞书上面，再自动调用引导的AI去实现类目的一个分析，再传回飞书上，这是我写的比较复杂的一个自动化流程，写了一个星期吧。</p>
+<p>交付的之前肯定是测试过，然后保证测试用例都符合业务方的标准，然后再让业务确认一遍，没问题就交付，之后有bug的话，我让他们提需求，然后我再去优化。</p>
+<p><strong>叔叔：</strong>
+大部分实习生的经历都差不多，但是技术基础、思维方式、沟通能力会差别很大。</p>
+<p><strong>我：</strong>
+先是调研了一下Wayfair平台的技术文档，我是一个个发给AI，让他总结文档的内容，然后总结的过程中，我发现有几个参数是好像每个节点都要用到，我就给他们整合了一下，写成通用实体类。</p>
+<h4 id="1232"><strong>12:32</strong></h4>
+<p><strong>我（回答关于AI测试准确性的问题）：</strong>
+因为AI生成的测试内容它会描述的比较详细，我给提示词就让它，输出的过程加一些文本，我就能够清楚的判断出是哪里出了问题，然后我就可以快速的回去定位他的问题。</p>
+<p>这一块主要是原来的函数比较长，但是单元测试的函数相对来说会简单一点，所以定位起问题会好定位很多，基本上我自己也能看出来。</p>
+<p>还有就是我喜欢在提示词里面让他加日志，这样的话，方便我了解他每个行为在做什么，从输出里面也能看出来，然后确认功能没问题的再把不必要的日志删除。</p>
+<p><strong>我（补充）：</strong>
+这也是写那个Python项目的时候我发现了一个方法，就是往往给AI的信息足够详细，它能快速定位问题出在哪里，后面我就遇到比较复杂的问题，我就会让他加日志，这样我的工作量就会少很多。</p>
+<h4 id="1247"><strong>12:47</strong></h4>
+<p><strong>我：</strong>
+我反思了一下自己的回答，太不严谨了，我好好复盘一下。</p>
+<h4 id="1313"><strong>13:13</strong></h4>
+<p><strong>我：</strong>
+应该是思维方式的差异，我想的是交付，系统能跑就行，但是没有考虑系统的稳定性，是脚本思维，删日志，ai写的测试也不可信，衡量标准应该是业务的文档，应该由人来定义这个标志，然后再根据这个标准进行测试。</p>
+<p>之前太关注交付速度，忽略了从系统的角度考虑问题，谢谢叔叔点拨。</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年2月14日 13:57:15 UTC">2026年2月14日</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年2月14日 13:57:15 UTC">2026年2月14日</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "content.code.copy", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/dynamic-mode.js"></script>
+      
+    
+  </body>
+</html>
